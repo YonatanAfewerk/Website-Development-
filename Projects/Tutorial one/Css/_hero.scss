@@ -1,0 +1,69 @@
+.hero {
+    background-color: $verylightGray;
+    // style of the hero for desktop by include the media breakpoints that we set
+    .container {
+        @include breakpoints-up(Large) {
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__img {
+        position: relative;
+        background-image: url("../images/bg-intro-mobile.svg");
+        background-size: cover; //so it doesn't stretch the svg and fill the space
+        background-repeat: no-repeat;
+        background-position: center center; // (hor)(ver) to make sure its in the center of the page
+        min-height: 17.5rem;
+        @include breakpoints-up(Large) {
+            flex: 3;
+            order: 2; // order of placement on the page
+            min-height: 41rem;
+            background-image: none;
+            // background-image: url("../images/bg-intro-desktop.svg");
+            // background-position: left center;
+        }
+        &::before {
+            // thus are pseudo-elements 
+            content: ""; // needs to have this or it wont show up
+            height: 100%; //its 100% so it can match the height of the parent
+            width: 160%;
+            position: absolute; // to make sure its above the img it should be absolute and the background img should be relative
+            background-image: url("../images/bg-intro-desktop.svg");
+            background-size: 94%;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+        &::after {
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-image: url("../images/image-mockups.png");
+            background-size: 94%;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+    }
+    &__text {
+        text-align: center;
+        @include breakpoints-up(Large) {
+            flex: 2;
+            order: 1; // order of placement on the page
+            text-align: left;
+        }
+        h1 {
+            font-weight: 300;
+            font-size: 2.31rem;
+            color: $darkBlue;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            @include breakpoints-up(Large) {
+                font-size: $font-xlg;
+            }
+        }
+        p {
+            line-height: 1.5;
+            margin-bottom: 2.25rem;
+        }
+    }
+}

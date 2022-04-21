@@ -1,0 +1,39 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.Front {
+    background-image: url("../Images/HomeCover.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 1370px;
+}
+
+.info {
+    height: 1423px;
+}
+
+header p {
+    margin: 0;
+    padding: 0;
+    color: rgb(222, 124, 39);
+}
+
+footer {
+    background-image: url("../images/Homefooter.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 765px;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+}
