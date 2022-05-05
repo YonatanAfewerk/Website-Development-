@@ -1,0 +1,16 @@
+.name {
+    text-align: center;
+}
+
+.name_{
+    font-size: 25px;
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+
+.links {
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+}
